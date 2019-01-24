@@ -5,7 +5,7 @@ This repository contains the code for CPCE-3D network introduced in the followin
 [3D Convolutional Encoder-Decoder Network for Low-Dose CT via Transfer Learning from a 2D Trained Network](https://doi.org/10.1109/TMI.2018.2832217) (IEEE TMI)
 
 ## Installation
-Make sure you have [Python](https://www.python.org/) installed, then install [TensorFlow](https://www.tensorflow.org/install/) and [Scikit-learn](http://scikit-learn.org/) on your system.
+Make sure you have [Python 2.7](https://www.python.org/) installed, then install [TensorFlow](https://www.tensorflow.org/install/) and [Scikit-learn](http://scikit-learn.org/) on your system.
 
 ## Usage
 
@@ -20,14 +20,14 @@ Here N, D, W, and H are number, depth, width, and height of the input data, resp
 
 ### Pre-trained VGG model
 
-Please also download the pre-trained VGG model from [here](https://mega.nz/1a61c789-50d3-42f8-92af-09f89e3a152e).
+Please also download the pre-trained VGG model from [here](https://drive.google.com/open?id=1mfYjG2uBAhRtEhFKh1TVirTIzAaRgL18). Link updated on Jan 23, 2019.
 
 ### Training network
 ```
 python main.py
 ``` 
 
-If you want to use the transfer learning from 2D to 3D, please train a 2D model first. The ``CPCE-3D`` model here can automatically deal with 2D input and 3D input with various depth (3, 5, 7, and 9), relying on the input size.
+If you want to use the transfer learning from 2D to 3D, please train a 2D model first. The ``CPCE-3D`` model here can automatically deal with 2D input and 3D input with various depths (3, 5, 7, and 9), relying on the input size. A simple 2D model ``CPCE-2D`` and its shortcut connection version are added for only 2D case. 
 
 ## Citation
 
