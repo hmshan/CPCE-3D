@@ -65,7 +65,7 @@ def CPCE_3D(inputs, padding='valid'):
         outputs4 = tf.layers.conv3d(outputs4, 32, 3, padding=padding, kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv4', use_bias=False)
     else:
         if len(outputs4.shape) == 5:
-            outputs4 = tf.squeeze(outputs4)
+            outputs4 = tf.squeeze(outputs4, 1)
         outputs4 = tf.layers.conv2d(outputs4, 32, 3, padding=padding, kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv4', use_bias=False)
     outputs5 = tf.nn.relu(outputs4)
 
